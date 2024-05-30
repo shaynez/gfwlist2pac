@@ -41,7 +41,7 @@ jobs:
         run: |
           set -x
 
-          genpac --pac-proxy "SOCKS5 192.168.123.3:1089; 192.168.123.3:1090; SOCKS5 192.168.123.1:1089; SOCKS5 192.168.123.1:1088; SOCKS5 192.168.123.1:7891; 192.168.123.1:1090; DIRECT;" --gfwlist-url - --gfwlist-local gfwlist/gfwlist.txt -o gfwlist.pac
+          genpac --pac-proxy "SOCKS5 192.168.31.3:1089; 192.168.31.3:1090; SOCKS5 192.168.123.3:1089; 192.168.123.3:1090; SOCKS5 192.168.123.1:1089; SOCKS5 192.168.123.1:1088; SOCKS5 192.168.123.1:7891; 192.168.123.1:1090; DIRECT;" --gfwlist-url - --gfwlist-local gfwlist/gfwlist.txt -o gfwlist.pac
           sed '1,7d' -i gfwlist.pac
 
           git add gfwlist.pac
